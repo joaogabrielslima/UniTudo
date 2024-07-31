@@ -1,0 +1,411 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#18524b">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:background="#167f6c">
+
+        <ImageButton
+            android:id="@+id/profileButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_boy_24"
+            android:background="@null"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"/>
+
+        <ImageButton
+            android:id="@+id/filterButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_align_horizontal_left_24"
+            android:background="@null"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"/>
+
+        <EditText
+            android:id="@+id/busca"
+            style="@style/Edit_Text"
+            android:hint="@string/buscar"
+            android:inputType="text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"/>
+
+        <!-- Two buttons centered but spaced between themselves (Bottom Half) -->
+
+        <ImageButton
+            android:id="@+id/button1"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/busca"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/verde_borda"
+            android:src="@drawable/outline_home_24" />
+
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="75dp"
+            android:layout_height="60dp"
+            android:layout_below="@id/busca"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="70dp"
+            android:src="@drawable/outline_bus_alert_24"
+            android:background="@color/verde_borda"/>
+
+    </RelativeLayout>
+
+
+    <!-- Scrollable Area -->
+    <ScrollView
+        android:id="@+id/scrollable_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/header">
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="15dp"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false">
+
+            <RelativeLayout
+                android:id="@+id/item1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/feed_itens"
+                android:padding="10dp"
+                android:layout_columnWeight="1"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_home_24"
+                    android:layout_centerHorizontal="true" />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_below="@+id/image"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    android:textColor="#79ffcb"
+                    android:layout_centerHorizontal="true"/>
+
+                <ImageView
+                        android:layout_below="@+id/text"
+                        android:id="@+id/like"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/outline_arrow_upward_24"
+                        android:layout_alignParentStart="true"/>
+
+                    <ImageView
+                        android:layout_below="@+id/text"
+                        android:id="@+id/dislike"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_arrow_downward_24"
+                        android:layout_toEndOf="@id/item1"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/item2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/feed_itens"
+                android:padding="10dp"
+                android:layout_columnWeight="1"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_bed_24"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_below="@+id/image"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    android:textColor="#79ffcb"
+                    android:layout_centerHorizontal="true"/>
+
+                <ImageView
+                    android:layout_below="@+id/text"
+                    android:id="@+id/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_arrow_upward_24"
+                    android:layout_alignParentStart="true"/>
+
+                <ImageView
+                    android:layout_below="@+id/text"
+                    android:id="@+id/dislike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_arrow_downward_24"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/item2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/feed_itens"
+                android:padding="10dp"
+                android:layout_columnWeight="1"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_bed_24"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_below="@+id/image"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    android:textColor="#79ffcb"
+                    android:layout_centerHorizontal="true"/>
+
+                <ImageView
+                    android:layout_below="@+id/text"
+                    android:id="@+id/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_arrow_upward_24"
+                    android:layout_alignParentStart="true"/>
+
+                <ImageView
+                    android:layout_below="@+id/text"
+                    android:id="@+id/dislike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_arrow_downward_24"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/item2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/feed_itens"
+                android:padding="10dp"
+                android:layout_columnWeight="1"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_bed_24"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_below="@+id/image"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    android:textColor="#79ffcb"
+                    android:layout_centerHorizontal="true"/>
+
+                <ImageView
+                    android:layout_below="@+id/text"
+                    android:id="@+id/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_arrow_upward_24"
+                    android:layout_alignParentStart="true"/>
+
+                <ImageView
+                    android:layout_below="@+id/text"
+                    android:id="@+id/dislike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_arrow_downward_24"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/item2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/feed_itens"
+                android:padding="10dp"
+                android:layout_columnWeight="1"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_bed_24"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_below="@+id/image"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    android:textColor="#79ffcb"
+                    android:layout_centerHorizontal="true"/>
+
+                <ImageView
+                    android:layout_below="@+id/text"
+                    android:id="@+id/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_arrow_upward_24"
+                    android:layout_alignParentStart="true"/>
+
+                <ImageView
+                    android:layout_below="@+id/text"
+                    android:id="@+id/dislike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_arrow_downward_24"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/item2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/feed_itens"
+                android:padding="10dp"
+                android:layout_columnWeight="1"
+                android:clickable="true">
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_bed_24"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_below="@+id/image"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                    android:textColor="#79ffcb"
+                    android:layout_centerHorizontal="true"/>
+
+                <ImageView
+                    android:layout_below="@+id/text"
+                    android:id="@+id/like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/outline_arrow_upward_24"
+                    android:layout_alignParentStart="true"/>
+
+                <ImageView
+                    android:layout_below="@+id/text"
+                    android:id="@+id/dislike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/baseline_arrow_downward_24"
+                    android:layout_alignParentBottom="true"/>
+
+            </RelativeLayout>
+
+
+        </GridLayout>
+    </ScrollView>
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:background="#167f6c">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/icon1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@drawable/outline_content_paste_search_24" />
+
+            <ImageButton
+                android:id="@+id/icon2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/outline_chat_bubble_outline_24"
+                android:background="@null"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/icon3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/outline_add_reaction_24"
+                android:background="@null"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/icon4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/outline_app_settings_alt_24"
+                android:background="@null"
+                android:layout_weight="1"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

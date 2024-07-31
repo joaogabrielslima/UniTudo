@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/transporteFragment">
+
+
+    <fragment
+        android:id="@+id/menu_search"
+        android:name="com.example.unitudo.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/menu_favorite"
+        android:name="com.example.unitudo.FavoriteFragment"
+        android:label="fragment_favorite"
+        tools:layout="@layout/fragment_favorite" />
+    <fragment
+        android:id="@+id/menu_message"
+        android:name="com.example.unitudo.MessageFragment"
+        android:label="fragment_message"
+        tools:layout="@layout/fragment_message" />
+    <fragment
+        android:id="@+id/menu_configuration"
+        android:name="com.example.unitudo.ConfigurationFragment"
+        android:label="fragment_configuration"
+        tools:layout="@layout/fragment_configuration" />
+    <fragment
+        android:id="@+id/transporteFragment"
+        android:name="com.example.unitudo.TransporteFragment"
+        android:label="fragment_transporte"
+        tools:layout="@layout/fragment_transporte" />
+</navigation>
+
+
+
+

@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">UniTudo</string>
+    <string name="entra">Entrar</string>
+    <string name="text_cadastro">Não possui cadastro? Crie sua conta.</string>
+    <string name="text_recuperar_senha">Esqueceu a senha?</string>
+    <string name="title_cadastro">Cadastre-se</string>
+
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="menu_bottom_bar_search">Search</string>
+    <string name="menu_bottom_bar_favorite">Favorite</string>
+    <string name="menu_bottom_bar_massage">Massage</string>
+    <string name="menu_bottom_bar_configuration">Configuration</string>
+    <string name="noite">Noite</string>
+    <string name="manha">Manhã</string>
+    <string name="buscar">Buscar</string>
+    <string name="cadastrar">Cadastrar</string>
+    <string name="profile_button">Perfil</string>
+    <string name="filter_button">Filtros</string>
+</resources>
